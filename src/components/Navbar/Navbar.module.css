@@ -10,8 +10,8 @@
     color: #ffffff;
 }
 
-.active{
-    color: greenyellow;
+a.active{
+    color: rgb(47, 255, 141);
 }
 
 .navbar{
