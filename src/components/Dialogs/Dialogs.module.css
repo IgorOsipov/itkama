@@ -1,0 +1,36 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    justify-items: stretch;
+    align-items: start;
+    min-height: 100vh;
+}
+
+.dialogs_items .active{
+    color: rgb(212, 183, 14);
+    text-decoration: underline;
+}
+
+.dialogs_items a{
+    font-size: 2em;
+    line-height: 1.5em;
+    color: rgb(80, 80, 80);
+    text-decoration: none;
+
+    border-right: 1px solid rgb(80, 80, 80);
+
+    display: grid;
+    justify-items: center;
+}
+
+.messages{
+    font-size: 1.8em;
+    font-style: 1.5em;
+}
+
+.message{
+    color: rgb(36, 35, 35);
+
+    display: grid;
+    justify-items: center;
+}

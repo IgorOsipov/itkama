@@ -13,8 +13,8 @@ import Settings from './components/Settings/Settings';
 const App = () => {
   return (
     <BrowserRouter>
+      <Header />
       <div className='app_wrapper'>
-        <Header />
         <Navbar />
         <div className="app_wrapper_content">
           <Route path='/profile' component={Profile} />

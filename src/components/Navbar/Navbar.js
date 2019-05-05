@@ -4,7 +4,7 @@ import nav from './Navbar.module.css';
 
 const Navbar = () => {
     return (
-        <nav className={nav.main_nav}>
+        <div className={nav.main_nav}>
             <ul className={nav.navbar}>
                 <li><NavLink className={nav.item} activeClassName={nav.active} to="/profile">Profile</NavLink></li>
                 <li><NavLink className={nav.item} activeClassName={nav.active} to="/dialogs">Messages</NavLink></li>
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <li><NavLink className={nav.item} activeClassName={nav.active} to="/music">Music</NavLink></li>
                 <li><NavLink className={nav.item} activeClassName={nav.active} to="/settings">Settings</NavLink></li>
             </ul>
-        </nav>
+        </div>
     );
 }
 

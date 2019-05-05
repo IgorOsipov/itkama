@@ -16,6 +16,10 @@
   align-items: flex-start;
 }
 
+.my_posts{
+  padding: 3rem;
+}
+
 .my_posts h2{
   width: 100%;
 
@@ -24,5 +28,5 @@
   line-height: 2em;
   text-transform: uppercase;
 
-  color: #fff;
+  color: rgb(80, 80, 80);
 }
