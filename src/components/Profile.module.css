@@ -1,0 +1,10 @@
+.content{
+  grid-area: c;
+  background-color: rgb(33, 144, 196);   
+}
+.avatar img{
+  width: 100px;
+}
+.profile_cover img{
+  width: 100%;
+}

@@ -1,3 +1,5 @@
+/* autoprefixer grid: on */
+
 html, body, body div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
 abbr, address, cite, code, del, dfn, em, img, 
@@ -16,9 +18,25 @@ time, mark, audio, video {
 }
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body{
-    font-size: 10px;
+  font-size: 10px;
 }
+
+.app_wrapper{
+  display: grid;
+  grid-template-areas: 
+                      "h h"
+                      "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+
+  max-width: 1024px;
+  min-height: 100vh; 
+  margin: 0 auto;
+}
+
+
+

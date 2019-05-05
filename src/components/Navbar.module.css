@@ -1,0 +1,24 @@
+.main_nav{
+    grid-area: n;
+
+    background-color: rgb(118, 68, 184);
+    padding: 2em;
+
+    
+}
+
+.item{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.active{
+    color: greenyellow;
+}
+
+.navbar{
+    list-style: none;
+    
+    font-size: 1.8em;
+    line-height: 2em;
+}

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autoprefixer": "^9.5.1",
     "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
@@ -19,7 +21,11 @@
   },
   "browserslist": {
     "production": [
-      "since 2010"
+      "since 2010",
+      "last 1 version",
+      "> 1%",
+      "maintained node versions",
+      "not dead"
     ],
     "development": [
       "last 1 chrome version",
