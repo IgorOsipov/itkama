@@ -1,0 +1,10 @@
+.new_post{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.new_post textarea{
+  resize: none;
+}
