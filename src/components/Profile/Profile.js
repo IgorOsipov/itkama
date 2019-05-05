@@ -5,7 +5,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <div className={s.profile_cover}>
                 <img src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg" alt="cover" />
             </div>

@@ -38,5 +38,9 @@ html, body{
   margin: 0 auto;
 }
 
+.app_wrapper_content{
+  grid-area: c;
+  background-color: rgb(33, 144, 196);   
+}
 
 
