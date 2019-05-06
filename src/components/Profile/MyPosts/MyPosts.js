@@ -3,6 +3,12 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = () => {
+
+    let postsData = [
+        {message:'Hi, how are you?', id:1},
+        {message:"It's my first Post", id:2}
+    ]
+
     return (
         <div className={s.my_posts}>
             <h2>myposts</h2>
@@ -11,8 +17,9 @@ const MyPosts = () => {
                 <button>Add Post</button>
             </div>
             <div className={s.posts}>
-                <Post message='Hi, how are you?'/>
-                <Post message="It's my first Post"/>
+                {
+                    postsData.map(item => <Post message={item.message} key={item.id}/>)
+                }
             </div>
         </div>
     );

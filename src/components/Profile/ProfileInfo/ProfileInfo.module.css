@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.avatar, .info{
+  margin: 3rem;
+}
+
+.avatar{
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(68, 67, 67);
+}
+
+.avatar img{
+  width: 100%;
+}
+
+.info h3{
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+.profile_cover img{
+  width: 100%;
+}
