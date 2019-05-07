@@ -8,8 +8,9 @@ const Dialogs = (props) => {
 
     let dialogsData = props.dialogsData.dialogs
     let messagesData = props.dialogsData.messages
+    let newMessageBody = props.store._state.dialogsPage.newMessageBody
 
-    let newMessageBody = props.store.newMessageBody;
+    
     let onSendMessageClick = () => {
         props.store.dispatch(sendMessageCreator())
     }
@@ -32,7 +33,7 @@ const Dialogs = (props) => {
                 }
                 <div>
                     <div className={s.new_message}>
-                        <textarea onChange={onNewMessageChange} value={newMessageBody} rows="3"></textarea>
+                        <textarea onChange={onNewMessageChange} value={newMessageBody} rows="3" />
                         <input onClick={onSendMessageClick} type="button" value="Send Message"/>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ let store = {
                 {message:'Hi, how are you?', id:1},
                 {message:"It's my first Post", id:2}
             ],
-            newPostText: ''
+            newPostText:''
         },
     
         dialogsPage:{
@@ -20,7 +20,7 @@ let store = {
                 {message:'How are you my nigga?', id:2}, 
                 {message:"I'm fine, working on field of white master, right now", id:3} 
             ],
-            newMessageBody: '',
+            
             dialogs: [
                 {name:'Dima', id:1},
                 {name:'Andrey', id:2}, 
@@ -28,7 +28,8 @@ let store = {
                 {name:'Sasha', id:4},
                 {name:'Victor', id:5},
                 {name:'Valera', id:6}
-            ]
+            ],
+            newMessageBody:''
         },
         sidebar:{} 
     },
