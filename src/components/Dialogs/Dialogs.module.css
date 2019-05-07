@@ -34,3 +34,35 @@
     display: grid;
     justify-items: center;
 }
+
+.new_message{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.new_message textarea{
+    resize: none;
+    width: 100%;
+    border-radius: 0.3em;
+}
+.new_message input{
+    background-color: #5181b8;
+    color: #ffffff;
+    
+    padding: 0.8em 2em;
+    margin-top: 0.2em;
+    
+    border: none;
+    border-radius: 0.3em;
+
+    cursor: pointer;
+}
+
+.new_message input[type='button']:hover{
+    background-color: #5181b8;
+    box-shadow: 0px 0px 10px 1px rgba(81,129,184,1);
+}
