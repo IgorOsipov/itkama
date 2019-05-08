@@ -8,7 +8,7 @@ const Dialogs = (props) => {
 
     let dialogsData = props.dialogsData.dialogs
     let messagesData = props.dialogsData.messages
-    let newMessageBody = props.store._state.dialogsPage.newMessageBody
+    let newMessageBody = props.dialogsData.newMessageBody
 
     
     let onSendMessageClick = () => {
@@ -24,7 +24,7 @@ const Dialogs = (props) => {
         <div className={s.dialogs}>
             <div className={s.dialogs_items}>
                 {
-                    dialogsData.map(item => <DialogItem name={item.name} />)
+                    dialogsData.map(item => <DialogItem name={item.name} id={item.id}/>)
                 }
             </div>
             <div className={s.messages}>
