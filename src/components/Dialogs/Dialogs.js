@@ -5,30 +5,31 @@ import Message from './Message/Message'
 
 
 const Dialogs = (props) => {
-
+    let dp = props.dialogsPage
+    
     let onSendMessageClick = () => {
-        props.onSendMessageClick()
+        props.sendMessage()
     }
 
     let onNewMessageChange = (e) => {
         let text = e.target.value
-        props.onNewMessageChange(text)
+        props.updateMessage(text)
     }
 
     return(
         <div className={s.dialogs}>
             <div className={s.dialogs_items}>
                 {
-                    props.dialogs.map(item => <DialogItem name={item.name} id={item.id}/>)
+                    dp.dialogs.map(item => <DialogItem name={item.name} key={item.id} id={item.id}/>)
                 }
             </div>
             <div className={s.messages}>
                 {
-                    props.messages.map(item => <div><Message message={item.message} /></div>)
+                    dp.messages.map(item => <Message  key={item.id} message={item.message} />)
                 }
                 <div>
                     <div className={s.new_message}>
-                        <textarea onChange={onNewMessageChange} value={props.newMessageBody} rows="3" />
+                        <textarea onChange={onNewMessageChange} value={dp.newMessageBody} rows="3" />
                         <input onClick={onSendMessageClick} type="button" value="Send Message"/>
                     </div>
                 </div>
