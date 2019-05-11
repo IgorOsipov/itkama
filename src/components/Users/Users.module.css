@@ -44,15 +44,15 @@
     padding: 0.2em 0.7em;
     margin-top: 1rem;
 
-    background-color: rgb(57, 114, 24);
+    background-color: #5181b8;
     color: #fff;
 
     cursor: pointer;
 }
 
 .left_wrapper input[type='button']:hover{
-    background-color: rgba(57, 114, 24, 0.9);
-    box-shadow: 0px 0px 5px 0px rgba(57, 114, 24, 1);
+    background-color: #5181b8;
+    box-shadow: 0px 0px 5px 0px rgba(81,129,184,1);
 }
 
 .right_wrapper{
