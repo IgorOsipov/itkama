@@ -98,3 +98,26 @@
     font-size: 3em;
     font-weight: 600;
 }
+
+.pageBar{
+    display: flex;
+    justify-content: center;
+
+    font-size: 2em;
+    line-height: 1.8em;
+    
+    margin-top: 0.5em;
+}
+
+.pageBar span{
+    margin: 0 5px;
+
+    cursor: pointer;
+}
+
+.selected{
+    font-weight: bold;
+    color: #5181b8;
+    
+    transform: scale(1.5);
+}
