@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 const PreloaderDiv = styled.div`
     position: absolute;
-    left: 50%;
-    top: 40%;
+    left: 47%;
+    top: 35%;
 
     background-color: #fff;
     border: 1px solid rgba(80, 80, 80, 0.308);
@@ -18,8 +18,6 @@ const PreloaderDiv = styled.div`
 const ImageDiv = styled.img`
     width: 100%;
     height: 100%;
-
-    
 `;
 
 class Preloader extends Component {

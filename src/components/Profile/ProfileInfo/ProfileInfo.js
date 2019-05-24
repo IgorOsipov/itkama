@@ -1,18 +1,22 @@
 import React from 'react';
-import s from './ProfileInfo.module.css'
+import Preloader from '../../common/Preloader/Preloader';
+import { Wrapper, AvatarContainer, InfoContainer } from './ProfileInfoStyled';
+import userPng from '../../../assets/img/user.png'
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({ profile }) => {
+    if (!profile) {
+        return <Preloader />
+    }
     return (
-        <div className={s.container}>
-            <div className={s.profile_cover}>
-            </div>
-            <div className={s.avatar}>        
-            </div>
-            <div className={s.info}>
-                <h3>Василий Пупкин</h3>
-                <h3>27 лет</h3>
-            </div>
-        </div>
+
+        <Wrapper>
+            <AvatarContainer photo={profile.photos.large ? profile.photos.large : userPng}/>
+            <InfoContainer>
+                <h3>{profile.fullName}</h3>
+                <p>{profile.aboutMe}</p>
+            </InfoContainer>
+        </Wrapper>
+
     )
 }
 

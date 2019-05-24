@@ -5,7 +5,7 @@ const SETCURRENTPAGE = 'SETCURRENTPAGE'
 const SETTOTALCOUNT = 'SETTOTALCOUNT'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 
-let initialState = {
+const initialState = {
     users: [],
     pageSize: 6,
     totalUsersCount: 0,

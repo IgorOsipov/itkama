@@ -1,5 +1,6 @@
 import React from 'react';
 import userImg from '../../assets/img/user.png';
+import {NavLink} from 'react-router-dom';
 import { PageBar, PageBarSpan, Wrapper, LeftWrapper, Avatar, RightWrapper} from './UsersStyles';
 
 
@@ -17,9 +18,7 @@ const Users = (props) => {
     return (
         <div>
             <PageBar>
-                {pages.map(p => {
-                    return <PageBarSpan key={p} onClick={() => { props.onPageChanged(p) }} className={props.currentPage === p && 'selected'} >{p}</PageBarSpan>
-                })}
+                {pages.map(p => <PageBarSpan key={p} onClick={() => { props.onPageChanged(p) }} className={props.currentPage === p && 'selected'} >{p}</PageBarSpan>)}
             </PageBar>
             {props.users.map((user) => {
                 return (
@@ -35,7 +34,7 @@ const Users = (props) => {
                         </LeftWrapper>
                         <RightWrapper>
                             <div className='name_status'>
-                                <h2>{user.name}</h2>
+                                <NavLink className='nav_link' to={`/profile/${user.id}`}><h2>{user.name}</h2></NavLink>
                                 <p>{user.status}</p>
                             </div>
                         </RightWrapper>

@@ -56,9 +56,10 @@ let mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = {
+    follow, unfollow, setUsers,
+    setCurrentPage, setTotalUsersCount, setIsFetching        
+}
 
 
-export default connect(mapStateToProps, {
-        follow, unfollow, setUsers,
-        setCurrentPage, setTotalUsersCount, setIsFetching        
-    })(UsersConatiner);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersConatiner);

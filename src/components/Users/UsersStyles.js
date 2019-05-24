@@ -97,6 +97,8 @@ export const RightWrapper = styled.div`
     
     width: 85%;
 
+    
+
     .name_status{
         display: flex;
         flex-flow: column nowrap;
@@ -105,16 +107,22 @@ export const RightWrapper = styled.div`
 
         height: 100%;
 
-        h2{
-            font-size: 4em;
-            font-weight: 600;
-        }
+        
 
         p{
             font-size: 2em;
             font-weight: 300;
 
             color: rgb(102, 102, 102);
+        }
+
+        .nav_link{
+            text-decoration: none;
+            h2{
+                font-size: 4em;
+                font-weight: 600;
+                color: #000;
+            }
         }
     }
 
