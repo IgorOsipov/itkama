@@ -11,6 +11,7 @@ export const NavWrapper = styled.div`
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 1;
 `;
 
 export const NavList = styled.ul`

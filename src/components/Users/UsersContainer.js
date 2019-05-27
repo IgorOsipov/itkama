@@ -1,30 +1,37 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import * as axios from 'axios'
 import { follow, unfollow, setUsers, setCurrentPage, setTotalUsersCount, setIsFetching } from '../../redux/usersReducer'
 import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
+import SamServices from '../../services/SamServices'
 
 
 
 class UsersConatiner extends Component{
 
+    SamServices = new SamServices
+
     componentDidMount(){
         this.props.setIsFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => { 
-                this.props.setIsFetching(false)
-                this.props.setUsers(response.data.items)
-                this.props.setTotalUsersCount(response.data.totalCount)
-            })
+
+        this.SamServices.getUsers(this.props.currentPage,this.props.pageSize)
+        .then(users => {
+            this.props.setIsFetching(false)
+            this.props.setUsers(users.items)
+            this.props.setTotalUsersCount(users.totalCount)
+        })
+
     }
 
     onPageChanged = (pageNumber) => {
         this.props.setIsFetching(true)
         this.props.setCurrentPage(pageNumber)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => { 
-                this.props.setIsFetching(false)
-                this.props.setUsers(response.data.items)
-            })
+
+        this.SamServices.getUsers(pageNumber, this.props.pageSize)
+        .then(users => {
+            this.props.setIsFetching(false)
+            this.props.setUsers(users.items)
+        })
     }
   
     render(){
