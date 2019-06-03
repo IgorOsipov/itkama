@@ -1,14 +1,13 @@
 import React from 'react';
 import Preloader from '../../common/Preloader/Preloader';
 import { Wrapper, AvatarContainer, InfoContainer } from './ProfileInfoStyled';
-import userPng from '../../../assets/img/user.png'
+import userPng from '../../../assets/img/user.png';
 
 const ProfileInfo = ({ profile }) => {
     if (!profile) {
         return <Preloader />
     }
-    return (
-
+    return (   
         <Wrapper>
             <AvatarContainer photo={profile.photos.large ? profile.photos.large : userPng}/>
             <InfoContainer>

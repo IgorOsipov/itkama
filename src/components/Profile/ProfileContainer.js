@@ -8,13 +8,13 @@ import SamServices from '../../services/SamServices';
 
 
 class ProfileContainer extends React.Component {
-    SamServices = new SamServices;
+    SamServices = new SamServices()
+    
 
     componentDidMount(){ 
         const id = this.props.match.params.id ? this.props.match.params.id : '2'
         this.SamServices.getUserProfile(id)
         .then(data => this.props.setUserProfile(data))
-        .catch(<div></div>)
     }
 
     componentWillUnmount(){
@@ -29,7 +29,7 @@ class ProfileContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    profile: state.profilePage.profile,
+    profile: state.profilePage.profile
 })
 
 const mapDispatchToProps = {

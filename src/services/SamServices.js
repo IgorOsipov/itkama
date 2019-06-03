@@ -6,7 +6,9 @@ export default class SamServices {
     }
 
     getResoure = async (url) => {
-        const res = await fetch(`${this._apiBase}${url}`)
+        const res = await fetch(`${this._apiBase}${url}`, {
+            credentials: 'include'
+        })
 
         if(!res.ok){
             throw new Error(`Could not fetch ${url}, received ${res.status}`)
@@ -25,5 +27,34 @@ export default class SamServices {
         return res
     }
 
+    authorization = async () => {
+        const res = await fetch(`${this._apiBase}auth/me`, {
+            credentials: 'include'
+        })
+        return res.json()
+    }
 
+    followUser = async (userId) => {
+        const res = await fetch(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`, {
+            method: 'post',
+            headers: {
+                "API-KEY":'6f029e5f-48f9-458c-ac33-6b805ca9e34e'
+            },
+            credentials: 'include'
+        })
+
+        return res.json()
+    }
+
+    unfollowUser = async (userId) => {
+        const res = await fetch(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`, {
+            method: 'delete',
+            headers: {
+                "API-KEY":'6f029e5f-48f9-458c-ac33-6b805ca9e34e'
+            },
+            credentials: 'include'
+        })
+
+        return res.json()
+    }
 }
