@@ -1,24 +1,23 @@
 import React from 'react';
 import Profile from './Profile';
 import { connect } from 'react-redux';
-import { setUserProfile } from '../../redux/profileReducer';
+import { setUserProfile, setUserProfileSuccess } from '../../redux/profileReducer';
 import { withRouter } from 'react-router-dom';
-import SamServices from '../../services/SamServices';
+
 
 
 
 class ProfileContainer extends React.Component {
-    SamServices = new SamServices()
+    
     
 
     componentDidMount(){ 
         const id = this.props.match.params.id ? this.props.match.params.id : '2'
-        this.SamServices.getUserProfile(id)
-        .then(data => this.props.setUserProfile(data))
+        this.props.setUserProfile(id)
     }
 
     componentWillUnmount(){
-        this.props.setUserProfile(null)
+        this.props.setUserProfileSuccess(null)
     }
 
     render() {
@@ -33,7 +32,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-    setUserProfile
+    setUserProfile,
+    setUserProfileSuccess
 }
 
 

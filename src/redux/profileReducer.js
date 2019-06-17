@@ -1,6 +1,9 @@
+import SamServices from '../services/SamServices';
+
 const ADD_POST = "ADD-POST"
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT"
 const SET_USER_PROFILE = "SET_USER_PROFILE"
+const services = new SamServices()
 
 let initialState = {
     posts: [
@@ -52,6 +55,12 @@ export const updateNewPostTextActionCreator = (text) => {
     }
 }
 
-export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile })
+export const setUserProfileSuccess = (profile) => ({ type: SET_USER_PROFILE, profile })
+
+export const setUserProfile = (id) => (dispatch) =>{
+    services.getUserProfile(id)
+        .then(data => dispatch(setUserProfileSuccess(data)))
+}
+
 
 export default profileReducer;

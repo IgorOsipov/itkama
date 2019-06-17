@@ -27,8 +27,8 @@ const Users = (props) => {
                             <Avatar ava={user.photos.large ? user.photos.large : userImg}></Avatar>
                             {
                                 user.followed
-                                    ? <input type="button" value='unfollow' onClick={ () => {props.onUnfollowClick(user.id)}} />
-                                    : <input type="button" value='follow' onClick={() => {props.onFollowClick(user.id)}} />
+                                    ? <input disabled={props.followingInProgress.some(id => id === user.id)} type="button" value='unfollow' onClick={ () => {props.onUnfollowClick(user.id)}} />
+                                    : <input disabled={props.followingInProgress.some(id => id === user.id)} type="button" value='follow' onClick={() => {props.onFollowClick(user.id)}} />
                             }
 
                         </LeftWrapper>
