@@ -1,20 +1,20 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavWrapper, NavList } from './NavbarStyles';
 
 const Navbar = (props) => {
     return (
         <NavWrapper>
             <NavList>
-                <li><NavLink to="/profile">Profile</NavLink></li>
-                <li><NavLink to="/dialogs">Messages</NavLink></li>
-                <li><NavLink to="/news">News</NavLink></li>
-                <li><NavLink to="/music">Music</NavLink></li>
-                <li><NavLink to="/users">Find Users</NavLink></li>
-                <li><NavLink to="/settings">Settings</NavLink></li>
+                <li><Link to="/profile">Profile</Link></li>
+                <li><Link to="/dialogs">Messages</Link></li>
+                <li><Link to="/news">News</Link></li>
+                <li><Link to="/music">Music</Link></li>
+                <li><Link to="/users">Find Users</Link></li>
+                <li><Link to="/settings">Settings</Link></li>
                 <li>{props.isAuth ? 
                     <Link to={`/profile/${props.userId}`}>{props.login}</Link> :
-                    <NavLink to='/auth'>Login</NavLink>
+                    <Link to='/login'>Login</Link>
                 }</li>
             </NavList>
 

@@ -9,6 +9,7 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import { AppWrapper, AppWrapperContent } from './AppStyles';
 import NavbarContainer from './components/Navbar/NavbarContainer';
+import Login from './components/Login/Login';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/news' component={News} />
         <Route path='/users' component={UsersContainer} />
         <Route path='/settings' component={Settings} />
+        <Route path='/login' component={Login} />
       </AppWrapperContent>
     </AppWrapper>
   );

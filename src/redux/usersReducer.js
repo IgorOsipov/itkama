@@ -92,8 +92,7 @@ export const toggleFollowingProgress = (isFollowingProgress, userId) => {
     return { type: TOGGLE_IS_FOLLOWING_PROGRESS, isFollowingProgress, userId }
 }
 
-export const getUsers = (currentPage, pageSize) => {
-    return (dispatch) => {
+export const getUsers = (currentPage, pageSize) => (dispatch) => {
     
     dispatch(setIsFetching(true))
 
@@ -103,12 +102,11 @@ export const getUsers = (currentPage, pageSize) => {
             dispatch(setUsers(users.items))
             dispatch(setTotalUsersCount(users.totalCount))
             dispatch(setCurrentPage(currentPage))
-        })
-    }
+    })
+
 }
 
-export const follow = (userId) => {
-    return (dispatch) => {
+export const follow = (userId) => (dispatch) => {
     dispatch(toggleFollowingProgress(true, userId))
     SamurajsServices.followUser(userId)
         .then(responce => {
@@ -123,11 +121,10 @@ export const follow = (userId) => {
             }
         })
         .catch((e) => console.log(e))
-    }
-}
 
-export const unfollow = (userId) => {
-    return (dispatch) => {
+    }
+
+export const unfollow = (userId) => (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId))
         SamurajsServices.unfollowUser(userId)
             .then(responce => {
@@ -142,7 +139,7 @@ export const unfollow = (userId) => {
                 }
             })
             .catch((e) => console.log(e))
-        }
-}
+    }
+
 
 export default usersReducer
