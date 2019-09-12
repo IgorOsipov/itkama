@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const PageBar = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     font-size: 2em;
     line-height: 1.8em;

@@ -37,7 +37,6 @@ class UsersConatiner extends Component{
                     onFollowClick={this.onFollowClick}
                     onUnfollowClick={this.onUnfollowClick}
                     {...this.props}
-
                 />
             </>
         )

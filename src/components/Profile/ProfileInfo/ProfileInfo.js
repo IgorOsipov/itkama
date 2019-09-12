@@ -2,6 +2,7 @@ import React from 'react';
 import Preloader from '../../common/Preloader/Preloader';
 import { Wrapper, AvatarContainer, InfoContainer } from './ProfileInfoStyled';
 import userPng from '../../../assets/img/user.png';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = ({ profile }) => {
     if (!profile) {
@@ -12,7 +13,8 @@ const ProfileInfo = ({ profile }) => {
             <AvatarContainer photo={profile.photos.large ? profile.photos.large : userPng}/>
             <InfoContainer>
                 <h3>{profile.fullName}</h3>
-                <p>{profile.aboutMe}</p>
+                <ProfileStatus status={profile.aboutMe} />
+                
             </InfoContainer>
         </Wrapper>
 

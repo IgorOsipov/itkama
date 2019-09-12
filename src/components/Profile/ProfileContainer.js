@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setUserProfile, setUserProfileSuccess } from '../../redux/profileReducer';
 import { withRouter } from 'react-router-dom';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
+import { compose } from 'redux';
 
 
 
@@ -40,5 +41,8 @@ const mapDispatchToProps = {
 }
 
 
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(withAuthRedirect(ProfileContainer)))
+export default compose(
+    //withAuthRedirect, 
+    withRouter, 
+    connect(mapStateToProps, mapDispatchToProps)
+    )(ProfileContainer)
