@@ -11,7 +11,7 @@ const SamurajsServices = new SamServices();
 
 const initialState = {
     users: [],
-    pageSize: 6,
+    pageSize: 50,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,

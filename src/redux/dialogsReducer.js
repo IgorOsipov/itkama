@@ -4,8 +4,8 @@ const SEND_MESSAGE = "SEND-MESSAGE"
 let initialState = {
     messages: [
         {message:'Hi', id:1},
-        {message:'How are you my nigga?', id:2}, 
-        {message:"I'm fine, working on field of white master, right now", id:3} 
+        {message:'How are you my friend?', id:2}, 
+        {message:"I'm fine, working on field, right now", id:3} 
     ],
     
     dialogs: [
